@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import {TopLinks, Page} from './style'
+import {TopLinks, Page} from '../style/style'
 
 export const Layout=()=> {
     return (

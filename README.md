@@ -1,6 +1,6 @@
 # Test app
 
-## Available Scripts
+### Available Scripts
 
 ### `yarn start`
 
