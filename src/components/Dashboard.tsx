@@ -14,7 +14,7 @@ export const Dashboard =()=>{
             .then((res) => res.data)
       });
     
-      if (isLoading) return <div>Loading...</div>
+      if (isLoading) return <Page>Loading...</Page>
 
 
     return <Page>{users.map((user: { first_name: string; })=><div>{user.first_name}</div>)}</Page>

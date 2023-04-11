@@ -1,15 +1,15 @@
-import { Outlet, Link } from "react-router-dom";
-import {TopLinks, Page} from '../style/style'
+import { Outlet, NavLink } from "react-router-dom";
+import {TopLinks, MainPage} from '../style/style'
 
 export const Layout=()=> {
     return (
-      <Page>
-        <h3>App</h3>
+      <MainPage>  
             <TopLinks>
-              <Link to="/">Home</Link> 
-              <Link to="/dashboard">Dashboard</Link>
+              <img src="images/logo.png" />
+              <NavLink to="/">Home</NavLink> 
+              <NavLink to="/dashboard">Dashboard</NavLink>
             </TopLinks>
         <Outlet />
-      </Page>
+      </MainPage>
     );
   }
