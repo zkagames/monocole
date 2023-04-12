@@ -33,11 +33,6 @@ export  const AllEventsTable = ()=> {
 
   },[allEvents])
 
-
-
-  if(!allEvents.length){
-    return  <Page><b>No Events set. Go to "Daily Events</b></Page>
-  }
  
   return (
  
