@@ -1,8 +1,8 @@
 # Event calendar
 
-## to run
+### to run
 
-### `yarn`
+`yarn`
 
-### `yarn start`
+`yarn start`
 
