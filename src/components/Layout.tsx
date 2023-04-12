@@ -6,8 +6,8 @@ export const Layout=()=> {
       <MainPage>  
             <TopLinks>
               <img src="images/logo.png" />
-              <NavLink to="/">Home</NavLink> 
-              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/">Daily Events</NavLink> 
+              <NavLink to="/all">All Events</NavLink>
             </TopLinks>
         <Outlet />
       </MainPage>

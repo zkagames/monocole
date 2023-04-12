@@ -1,7 +1,8 @@
-# Test app
+# Event calendar
 
-### Available Scripts
+## to run
+
+### `yarn`
 
 ### `yarn start`
 
-### `yarn test`

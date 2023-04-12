@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+export const HEADER_COLOR = 'rgb(9, 113, 241)';
 
 export const MainPage = styled.div`
     padding:0px;
@@ -13,9 +14,10 @@ export const TopLinks = styled.div`
     align-items:center;
     padding: 10px;
     gap: 16px;
-    background: #24253a;
+    background: ${HEADER_COLOR};
+    font-weight:bold;
     a{transition: all 0.2s}
-    a{color:#778;text-decoration:none};
+    a{color:rgba(255,255,255,0.5);text-decoration:none};
 
     a.active, a:hover {
       color:white;
@@ -23,5 +25,5 @@ export const TopLinks = styled.div`
 `
 
 export const Page = styled.div`
-    padding: 10px;
+    padding: 16px;
 `

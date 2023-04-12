@@ -1,19 +1,19 @@
 import { Routes, Route} from "react-router-dom";
 import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { Dashboard } from './components/Dashboard';
-import { QueryClient, QueryClientProvider } from "react-query";
-const queryClient = new QueryClient();
+import { Events } from './components/Events';
+import { AllEventsTable } from './components/AllEventsTable';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
 export const App =()=> {
   return (
-    <QueryClientProvider client={queryClient}>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
     <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route index element={<Events />} />
+          <Route path="all" element={<AllEventsTable />} />
         </Route>
       </Routes>
-      </QueryClientProvider>
+    </LocalizationProvider>
   );
 }
