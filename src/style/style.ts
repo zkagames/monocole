@@ -9,12 +9,19 @@ export const MainPage = styled.div`
     font-family:verdana;
 `
 
+export const TopTabs = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-right: 4px;
+    background: ${HEADER_COLOR};
+`
+
 export const TopLinks = styled.div`
     display:flex;
     align-items:center;
     padding: 10px;
     gap: 16px;
-    background: ${HEADER_COLOR};
     font-weight:bold;
     a{transition: all 0.2s}
     a{color:rgba(255,255,255,0.5);text-decoration:none};

@@ -1,14 +1,24 @@
 import { Outlet, NavLink } from "react-router-dom";
-import {TopLinks, MainPage} from '../style/style'
+import {TopLinks, MainPage, TopTabs} from '../style/style'
+import { PAGES } from "../utils/consts";
+import { useContext } from "react";
+import { UserContext } from "../App";
 
 export const Layout=()=> {
-    return (
+  const userDetails = useContext(UserContext);
+  
+  return (
       <MainPage>  
-            <TopLinks>
-              <img src="images/logo.png" />
-              <NavLink to="/">Daily Events</NavLink> 
-              <NavLink to="/all">All Events</NavLink>
-            </TopLinks>
+            <TopTabs>
+              <TopLinks>
+                <img src="images/logo.png" />
+                {PAGES.map(page=>{
+                  const {path = '/', display} = page;
+                  return <NavLink key={display} to={path}>{display}</NavLink> }
+                  )}   
+              </TopLinks>
+              <div>{userDetails?.user}</div>
+            </TopTabs>        
         <Outlet />
       </MainPage>
     );
